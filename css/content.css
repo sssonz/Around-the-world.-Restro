@@ -1,0 +1,145 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.screen_1{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    padding: 2.6vw 2.6vw 1.5vw 2.6vw;
+    height: 52.15vw;
+}
+    
+.bl_1{
+    background-color: #FFAFCA;
+    grid-area: 1 / 1 / 2 / 13;
+}
+
+.bl_2{
+    background-color: #55c359;
+    grid-area: 2 / 1 / 3 / 9;
+}
+
+.bl_3{
+    background-color: #18205c;
+    grid-area: 3 / 1 / 4 / 9;
+}
+
+.bl_4{
+    background-color: #89a014;
+    grid-area: 2 / 9 / 4 / 13;
+}
+
+.screen_2, .screen_3{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    padding: 0vw 2.6vw 1.5vw 2.6vw;
+    height: 52.15vw;
+}
+
+.bl_5{
+    background-color: #FFAFCA;
+    grid-area: 1 / 1 / 3 / 7;
+}
+
+.bl_6{
+    background-color: #55c359;
+    grid-area: 1 / 7 / 2 / 13;
+}
+
+.bl_7{
+    background-color: #18205c;
+    grid-area: 2 / 7 / 3 / 11;
+}
+
+.bl_8{
+    background-color: #89a014;
+    grid-area: 2 / 11 / 3 / 13;
+}
+
+.bl_9{
+    background-color: #FFAFCA;
+    grid-area: 1 / 1 / 2 / 13;
+}
+
+.bl_10{
+    background-color: #55c359;
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.bl_11{
+    background-color: #18205c;
+    grid-area: 2 / 3 / 3 / 9;
+}
+
+.bl_12{
+    background-color: #89a014;
+    grid-area: 2 / 9 / 3 / 13;
+}
+
+.screen_4{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    padding: 0vw 2.6vw 1.5vw 2.6vw;
+    height: 52.15vw;
+}
+
+.bl_13{
+    background-color: #FFAFCA;
+    grid-area: 1 / 1 / 2 / 7;
+}
+
+.bl_14{
+    background-color: #55c359;
+    grid-area: 2 / 1 / 4 / 4;
+}
+
+.bl_15{
+    background-color: #18205c;
+    grid-area: 2 / 4 / 4 / 7;
+}
+
+.bl_16{
+    background-color: #89a014;
+    grid-area: 1 / 7 / 4 / 13;
+}
+
+.screen_5{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    padding: 0vw 2.6vw 2.6vw 2.6vw;
+    height: 52.15vw;
+}
+
+.bl_17{
+    background-color: #FFAFCA;
+    grid-area: 1 / 1 / 4 / 10;
+}
+
+.bl_18{
+    background-color: #55c359;
+    grid-area: 1 / 10 / 4 / 13;
+}
+
+.bl_19{
+    background-color: #18205c;
+    grid-area: 4 / 1 / 5 / 7;
+}
+
+.bl_20{
+    background-color: #89a014;
+    grid-area: 4 / 7 / 5 / 13;
+}

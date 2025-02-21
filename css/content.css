@@ -14,26 +14,25 @@ body{
     padding: 2.6vw 2.6vw 1.5vw 2.6vw;
     height: 93vh;
 }
-    
-.bl_1{
-    background-color: #F0E6D1;
-    background-image: url(../img/Header.svg);
+   
+.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8{
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
-    grid-area: 1 / 1 / 2 / 13;
     border: thick solid #1D1E19;
+    overflow: hidden;
+}
+
+.bl_1{
+    background-color: #F0E6D1;
+    background-image: url(../img/Header.svg);
+    grid-area: 1 / 1 / 2 / 13;
 }
 
 .bl_2{
     background-color: #F57B45;
     background-image: url(../img/Fon_train.svg);
-    background-position: center center;
-    background-size: 100%;
-    background-repeat: no-repeat;
     grid-area: 2 / 1 / 3 / 9;
-    border: thick solid #1D1E19;
-    overflow: hidden;
 }
 
 .img_train{
@@ -97,14 +96,13 @@ body{
 .bt:hover {
     background-color: #C6DF79;
     transform: scale(1.05);
-
 }
 
 .img_arrow{
     width: 1.35vw;
 }
 
-.text_num{
+.text_num_1{
     display: flex;
     flex-direction: row;
     gap: 2.6vw;
@@ -132,20 +130,44 @@ body{
 .bl_4{
     background-color: #66AEF4;
     background-image: url(../img/Noodles.svg);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
     grid-area: 2 / 9 / 4 / 13;
-    border: thick solid #1D1E19;
 }
 
+.img_drag_1, .img_drag_2, .img_drag_3, .img_drag_4, .img_drag_5, .img_drag_6{
+    cursor: move;
+    position: absolute;
+}
 
 .img_drag_1{
     width: 8vw;
     margin: 2.5vw 0 0 1.5vw;
-    cursor: move;
-    position: absolute;
 }
+
+.img_drag_2{
+    width: 1.9vw;
+    margin: 13.7vw 0 0 8.2vw;
+}
+
+.img_drag_3{
+    width: 4.4vw;
+    margin: 15.3vw 0 0 1.5vw;
+}
+
+.img_drag_4{
+    width: 1.6vw;
+    margin: 9.1vw 0 0 20vw;
+}
+
+.img_drag_5{
+    width: 3.1vw;
+    margin: 7.1vw 0 0 25vw;
+}
+
+.img_drag_6{
+    width: 1.8vw;
+    margin: 23.5vw 0 0 25.3vw;
+}
+
 
 .screen_2, .screen_3{
     display: grid;
@@ -154,27 +176,51 @@ body{
     grid-column-gap: 1.5vw;
     grid-row-gap: 1.5vw;
     padding: 0vw 2.6vw 1.5vw 2.6vw;
-    height: 52.15vw;
+    height: 93vh;
 }
 
 .bl_5{
-    background-color: #FFAFCA;
+    background-color: #F57B45;
     grid-area: 1 / 1 / 3 / 7;
+    border: thick solid #1D1E19;
 }
 
 .bl_6{
     background-color: #55c359;
     grid-area: 1 / 7 / 2 / 13;
+    background-image: url(../img/Illustr_1.svg);
 }
 
 .bl_7{
-    background-color: #18205c;
+    background-color: #F6CA45;
     grid-area: 2 / 7 / 3 / 11;
+    background-image: url(../img/Illustr_2.svg);
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 0 0 2vw;
+    gap: 3.6vw;
+}
+
+.img_text_2{
+    width: 53.3%;
+}
+
+.text_num_2{
+    display: flex;
+    flex-direction: column;
+    gap: 2.6vw;
 }
 
 .bl_8{
     background-color: #89a014;
     grid-area: 2 / 11 / 3 / 13;
+    background-image: url(../img/Cafe.svg);
+    transition: background-image 0.15s;
+}
+
+.bl_8:hover {
+    background-image: url(../img/Cafe_hover.svg);
 }
 
 .bl_9{

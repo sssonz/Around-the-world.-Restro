@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let drag_elements = document.querySelectorAll(".img_drag_1");
+    let drag_elements = document.querySelectorAll(".img_drag_1, .img_drag_2, .img_drag_3, .img_drag_4, .img_drag_5, .img_drag_6");
   
     drag_elements.forEach(function (element) {
         let isDragging = false;  

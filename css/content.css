@@ -3,6 +3,7 @@ body{
     width: 100%;
     height: 100%;
     flex-direction: column;
+    background-color: #F49EB7;
 }
 .screen_1{
     display: grid;
@@ -11,27 +12,139 @@ body{
     grid-column-gap: 1.5vw;
     grid-row-gap: 1.5vw;
     padding: 2.6vw 2.6vw 1.5vw 2.6vw;
-    height: 52.15vw;
+    height: 93vh;
 }
     
 .bl_1{
-    background-color: #FFAFCA;
+    background-color: #F0E6D1;
+    background-image: url(../img/Header.svg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-area: 1 / 1 / 2 / 13;
+    border: thick solid #1D1E19;
 }
 
 .bl_2{
-    background-color: #55c359;
+    background-color: #F57B45;
+    background-image: url(../img/Fon_train.svg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-area: 2 / 1 / 3 / 9;
+    border: thick solid #1D1E19;
+    overflow: hidden;
+}
+
+.img_train{
+    margin-top: 5.1vw;
+    margin-left: -14.1vw;
+    animation: train 8s ease-in-out infinite;
+}
+
+@keyframes train {
+    0% {
+        transform: translateX(-80vw);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(130vw);
+    }
 }
 
 .bl_3{
-    background-color: #18205c;
+    background-color: #F6CA45;
     grid-area: 3 / 1 / 4 / 9;
+    border: thick solid #1D1E19;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    justify-content: space-between;
+}
+
+.text_bt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_text_1{
+    width: 38%;
+}
+
+.bt{
+    border-radius: 4vw;
+    display: inline-flex;
+    padding: 0vw 1vw;
+    align-items: center;
+    gap: 0.5vw;
+    border: 0.1vw solid #1D1E19;
+    background: #F0E6D1;
+    box-shadow: 0.2vw 0.2vw 0px 0px #1D1E19;
+    color: #1D1E19;
+    font-family: 'Geomertia_ExtraBold';
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.bt:hover {
+    background-color: #C6DF79;
+    transform: scale(1.05);
+
+}
+
+.img_arrow{
+    width: 1.35vw;
+}
+
+.text_num{
+    display: flex;
+    flex-direction: row;
+    gap: 2.6vw;
+}
+
+.num{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1vw;
+}
+
+.img_num{
+    width: 2.7vw;
+}
+
+.text{
+    font-family: 'Geomertia_Bold';
+    font-size: 1.45vw;
+    color: #1D1E19;
+    text-transform: uppercase;
+    line-height: normal;
 }
 
 .bl_4{
-    background-color: #89a014;
+    background-color: #66AEF4;
+    background-image: url(../img/Noodles.svg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
     grid-area: 2 / 9 / 4 / 13;
+    border: thick solid #1D1E19;
+}
+
+
+.img_drag_1{
+    width: 8vw;
+    margin: 2.5vw 0 0 1.5vw;
+    cursor: move;
+    position: absolute;
 }
 
 .screen_2, .screen_3{

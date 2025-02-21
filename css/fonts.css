@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Geomertia_Bold';
+    src: url(../fonts/geometria_bold.otf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Geomertia_ExtraBold';
+    src: url(../fonts/geometria_extrabold.otf);
+    font-weight: 800;
+}

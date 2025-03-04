@@ -41,8 +41,6 @@
 		binding: function(){
 			// обрабатываем нажатие на карточку
 			this.$memoryCards.on("click", this.cardClicked);
-			// и нажатие на кнопку перезапуска игры
-			this.$restartButton.on("click", $.proxy(this.reset, this));
 		},
 
 		// что происходит при нажатии на карточку
@@ -66,17 +64,17 @@
 					// обнуляем первую карточку
 					_.guess = null;
 						// если вторая не совпадает с первой
-						} else {
-							// обнуляем первую карточку
-							_.guess = null;
-							// не ждём переворота второй карточки
-							_.paused = true;
-							// ждём полсекунды и переворачиваем всё обратно
-							setTimeout(function(){
-								$(".picked").removeClass("picked");
-								Memory.paused = false;
-							}, 600);
-						}
+				} else {
+					// обнуляем первую карточку
+					_.guess = null;
+					// не ждём переворота второй карточки
+					_.paused = true;
+					// ждём полсекунды и переворачиваем всё обратно
+					setTimeout(function(){
+						$(".picked").removeClass("picked");
+						Memory.paused = false;
+					}, 600);
+				}
 				// если мы перевернули все карточки
 				if($(".matched").length == $(".card").length){
 					// показываем победное сообщение
@@ -87,38 +85,42 @@
 
 		// показываем победное сообщение
 		win: function(){
-			// не ждём переворота карточек
-			this.paused = true;
 			// плавно показываем модальное окно с предложением сыграть ещё
 			setTimeout(function(){
 				Memory.showModal();
-				Memory.$game.fadeOut();
 			}, 1000);
 		},
 
-		// показываем модальное окно
 		showModal: function(){
-			// плавно делаем блок с сообщением видимым
+			// массив изображений для победного экрана
+			var images = [
+				"./img/Ticket_fon_1.svg", 
+				"./img/Ticket_fon_2.svg",
+				"./img/Ticket_fon_3.png", 
+				"./img/Ticket_fon_4.png",
+			];
+		
+			// выбираем случайное изображение из массива
+			var randomImage = images[Math.floor(Math.random() * images.length)];
+			
+			// устанавливаем выбранное изображение в элемент модального окна
+			this.$modal.find("#winningImage").attr("src", randomImage);
+			
+			// показываем блок с сообщением без анимации
 			this.$overlay.show();
-			this.$modal.fadeIn("slow");
-		},
-
-		// прячем модальное окно
-		hideModal: function(){
-			this.$overlay.hide();
-			this.$modal.hide();
-		},
-
-		// перезапуск игры
-		reset: function(){
-			// прячем модальное окно с поздравлением
-			this.hideModal();
-			// перемешиваем карточки
-			this.shuffleCards(this.cardsArray);
-			// раскладываем их на поле
-			this.setup();
-			// показываем игровое поле
-			this.$game.show("slow");
+			this.$modal.show();
+		
+			// закрытие модального окна при нажатии на кнопку
+			this.$modal.find(".close-button").on("click", function() {
+				this.$modal.hide();
+				this.$overlay.hide();
+			}.bind(this));
+		
+			// Закрытие модального окна при клике на оверлей
+			this.$overlay.on("click", function() {
+				this.$modal.hide();
+				this.$overlay.hide();
+			}.bind(this));
 		},
 
 		// Тасование Фишера–Йетса - https://bost.ocks.org/mike/shuffle/
@@ -176,6 +178,4 @@
     
 	// запускаем игру
 	Memory.init(cards);
-
-
 })();

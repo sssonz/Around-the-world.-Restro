@@ -6,6 +6,54 @@ body{
     background-color: #F49EB7;
 }
 
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(240,230,209,0.6); 
+    align-content: center;
+    justify-items: center;
+}
+
+.modal-content {
+    display: flex;
+    border-radius: 2.6vw;
+    border: thick solid #1D1E19;
+    background: #FFE1BB;
+    height: 30vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.56vw 1.56vw 0 0;
+}
+
+.bl_bt{
+    display: flex;
+    justify-content: flex-end;
+    width: 49.89vw;
+    height: 3.38vw;
+}
+
+.bl_winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.6vw;
+}
+
+.img_mes{
+    height: 8.22vw;
+}
+
+#winningImage{
+    width: 23.43vw;
+    height: 10.83vw;
+}
+
+
+
 .sectionfirst, .sectionsecond, .sectionthird, .sectionfour, .sectionfive{
     display: grid;
     grid-column-gap: 1.5vw;
@@ -18,15 +66,16 @@ body{
     grid-template-rows: repeat(3, 1fr);
     padding: 2.6vw;
     /*height: 51.1vw;*/
+    overflow: hidden;
 }
 
-/*.sectionnone{
-    display: none; 
-}*/
+.sectionnone{
+    display: none;
+}
    
-.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15{
+.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_20{
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     border: thick solid #1D1E19;
     overflow: hidden;
@@ -36,6 +85,7 @@ body{
     background-color: #F0E6D1;
     background-image: url(../img/Header.svg);
     grid-area: 1 / 1 / 2 / 13;
+    background-size: 100%;
 }
 
 .bl_2{
@@ -87,7 +137,7 @@ body{
     height: 3.75vw;
 }
 
-.bt, .bt_res{
+.bt, .bt_res, .bt_close{
     border-radius: 4vw;
     display: inline-flex;
     padding: 0vw 1vw;
@@ -105,12 +155,16 @@ body{
     transition: background-color 0.2s, transform 0.2s;
 }
 
-.bt:hover, .bt_res:hover {
+.bt:hover, .bt_res:hover, .bt_close:hover {
     background-color: #C6DF79;
     transform: scale(1.05);
 }
 
-.img_arrow{
+.bt_close{
+    background: #C6DF79;
+}
+
+.img_arrow, .img_ok, .img_close{
     width: 1.35vw;
 }
 
@@ -191,9 +245,66 @@ body{
 }
 
 .bl_5{
+    display: flex;
     background-color: #F57B45;
     grid-area: 1 / 1 / 3 / 7;
     border: thick solid #1D1E19;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.img_slot{
+    position: absolute;
+    width: 46.6%;
+    height: 95.3%;
+    margin-top: -0.5vw;
+    z-index: 2;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 27vw;
+    height: 14vw;
+    background-color: #F0E6D1;
+    overflow: hidden;
+    margin-left: 6.4vw;
+    margin-top: 2vw;
+    z-index: 1;
+}
+
+.bt_slot{
+    width: 4.58vw;
+    height: 4.58vw; 
+    background-color: #5DC27C; 
+    border-radius: 50%; 
+    border: thick solid #1D1E19;
+    cursor: pointer;
+    z-index: 3;
+    margin-top: -8vw;
+}
+.reel {
+    position: absolute;
+    width: 16.92vw;
+    margin-top: -6.3vw;
+    display: flex;
+    flex-direction: column; 
+    animation: reel 4s linear; 
+    overflow: hidden;
+    gap: 1.5vw;
+}
+
+@keyframes reel {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
+.inner {
+    width: 16.92vw;
+    height: 100%;
 }
 
 .bl_6{
@@ -240,67 +351,6 @@ body{
     padding: 1.5vw 2.6vw 1.5vw 2.6vw;
     height: 94.67vh;
 }
-
-.modal-overlay {
-    /* затемняем экран */
-    background: rgba(0, 0, 0, 0.8);
-    /* располагаем окно по центру экрана */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-  
-  /* настройки модального окна */
-  .modal {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    max-height: 90%;
-    max-width: 90%;
-    min-height: 380px;
-    margin: 0 auto;
-    background: white;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 30px 10px;
-  }
-  
-  /* настройки шрифта сообщения о победе */
-  .modal .winner {
-    font-size: 80px;
-    text-align: center;
-    color: #4d4d4d;
-    text-shadow: 0px 3px 0 black;
-  }
-  
-  /* настройки кнопки перезапуска игры */
-  .modal .restart {
-    margin: 30px auto;
-    padding: 20px 30px;
-    display: block;
-    font-size: 30px;
-    border: none;
-    background: #4d4d4d;
-    background: linear-gradient(#4d4d4d, #222);
-    border: 1px solid #222;
-    border-radius: 5px;
-    color: white;
-    text-shadow: 0px 1px 0 black;
-    cursor: pointer;
-  }
-  
-  /* меняем фон при наведении мышки на кнопку */
-  .modal .restart:hover {
-    background: linear-gradient(#222, black);
-  }
-  
-  /* выравниваем надписи на модальном окне по центру */
-  .modal .message {
-    text-align: center;
-  }
 
 .bl_9{
     background-color: #F0E6D1;
@@ -448,6 +498,7 @@ body{
     background-color: #F0E6D1;
     border: thick solid #1D1E19;
     grid-area: 2 / 4 / 4 / 7;
+    background-image: url(../img/Illustr_8.svg);
 }
 
 .bl_16{
@@ -464,9 +515,55 @@ body{
 }
 
 .bl_17{
+    display: flex;
     background-color: #C3DD7C;
     border: thick solid #1D1E19;
     grid-area: 1 / 1 / 4 / 10;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.3vw 0vw;
+}
+
+.ticket_1, .ticket_2, .ticket_3, .ticket_4{
+    width: 30.2vw;
+    height: 13.95vw;
+}
+
+.ticket_1{
+    background-image: url(../img/Ticket_fon_1.svg);
+    background-size: cover;
+}
+
+.ticket_2{
+    background-image: url(../img/Ticket_fon_2.svg);
+    background-size: cover;
+}
+
+.ticket_3{
+    background-image: url(../img/Ticket_fon_3.png);
+    background-size: cover;
+}
+
+.ticket_4{
+    background-image: url(../img/Ticket_fon_4.png);
+    background-size: cover;
+}
+
+.canvas {
+    background: transparent;
+    width: 30.2vw;
+    height: 13.95vw;
+}
+
+.canvas-container {
+    display: flex;
+    gap: 20px;
+}
+
+.canvas {
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .bl_18{
@@ -493,7 +590,7 @@ body{
     display: flex;
     border: thick solid #1D1E19;
     background-color: #F57B45;
-    grid-area: 4 / 1 / 5 / 7;
+    grid-area: 4 / 1 / 5 / 6;
     align-items: center;
     justify-content: center;
 }
@@ -505,5 +602,6 @@ body{
 .bl_20{
     background-color: #F0E6D1;
     border: thick solid #1D1E19;
-    grid-area: 4 / 7 / 5 / 13;
+    grid-area: 4 / 6 / 5 / 13;
+    background-image: url(../img/Illustr_9.svg);
 }

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
     const emojiValue = [
         "./img/Ticket_fon_1.svg", 
         "./img/Ticket_fon_2.svg",
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const winningImageSrc = randomImages[1]; // Предпоследнее изображение
             winningImage.src = winningImageSrc; // Устанавливаем выигрышное изображение
             modal.style.display = "block"; // Показываем модальное окно
+            checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
         }, 3500);
     });
       

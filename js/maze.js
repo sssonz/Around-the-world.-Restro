@@ -117,9 +117,8 @@ function checkWin() {
 
   if (foodRemaining === 0 && exitSquare) {
       showWinningModal(); // Показать модальное окно
-  } else if (foodRemaining === 0) {
-      infoBox.innerHTML = 'Соберите все овощи, чтобы найти выход!';
-  }
+      checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
+  } 
 }
 
 // Добавьте вызов assignGrid() в window.onload

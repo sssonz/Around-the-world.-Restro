@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             winningImage.src = winningImageSrc; // Устанавливаем выигрышное изображение
             modal.style.display = "block"; // Показываем модальное окно
+            checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
         }
     }
 

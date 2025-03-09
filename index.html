@@ -15,8 +15,10 @@
     <script  src="./js/slot.js" charset="UTF-8"></script>
     <script  src="./js/maze.js" charset="UTF-8"></script>
     <script  src="./js/erase.js" charset="UTF-8"></script>
+    <script  src="./js/result.js" charset="UTF-8"></script>
 </head>
 <body>
+
     <div class="modal" id="modal">
         <div class="modal-content">
             <div class="bl_bt">
@@ -28,8 +30,18 @@
                 <img class="img_mes" src="./img/Text_mes.svg" alt="">
                 <img id="winningImage" src="" alt="" />
             </div>
+            <div class="bl_res" style="display: none;">
+                <div class="tex">
+                    <img class="img_res" src="" alt="">
+                    <p class="res"></p>
+                </div>
+                <button id="but_res">
+                    <img class="img_bt" src="" alt="">
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="section sectionfirst">
         <div class="bl_1"></div>
         <div class="bl_2">

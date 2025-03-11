@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnReload.addEventListener("click", () => {
         if (!isGameActive) return; // Если игра уже активирована, ничего не делаем
         isGameActive = false; // Делаем игру неактивной
+        btnReload.addEventListener('mouseover', function() {
+            btnReload.style.pointerEvents = 'none'; // Отключает все события мыши
+        });
+        btnReload.style.cursor ="default";
     
         // Генерируем 9 случайных изображений
         const randomImages = [];
@@ -41,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const winningImageSrc = randomImages[1]; // Предпоследнее изображение
             winningImage.src = winningImageSrc; // Устанавливаем выигрышное изображение
             modal.style.display = "block"; // Показываем модальное окно
-            checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
         }, 3500);
     });
       

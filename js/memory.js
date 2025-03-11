@@ -88,7 +88,6 @@
 			// плавно показываем модальное окно с предложением сыграть ещё
 			setTimeout(function(){
 				Memory.showModal();
-				checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
 			}, 1000);
 		},
 

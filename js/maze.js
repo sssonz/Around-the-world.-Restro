@@ -107,7 +107,6 @@ function movePacMan(e) {
       gridSquare[pacIndex].classList.remove('food'); // Убираем класс food
       gridSquare[pacIndex].style.backgroundImage = ''; // Убираем изображение овоща
   }
-
   checkWin();
 }
 
@@ -116,8 +115,8 @@ function checkWin() {
   const exitSquare = gridSquare[pacIndex].classList.contains('exit');
 
   if (foodRemaining === 0 && exitSquare) {
+    document.removeEventListener('keydown', movePacMan); // Приостанавливаем игру
       showWinningModal(); // Показать модальное окно
-      checkAndAddWinningImage(); // Проверяем и добавляем изображение снова
   } 
 }
 
@@ -140,15 +139,15 @@ function showWinningModal() {
   // Закрытие модального окна по кнопке
   const closeButton = document.querySelector('.bt_close');
   closeButton.addEventListener('click', () => {
-      modal.style.display = 'none'; // Скрываем модальное окно
-      document.removeEventListener('keydown', movePacMan); // Приостанавливаем игру
+    document.removeEventListener('keydown', movePacMan); // Приостанавливаем игру
+    modal.style.display = 'none'; // Скрываем модальное окно
   });
 
   // Закрытие модального окна при клике вне его
   window.addEventListener('click', (e) => {
       if (e.target === modal) {
-          modal.style.display = 'none'; // Скрываем модальное окно
-          document.removeEventListener('keydown', movePacMan); // Приостанавливаем игру
+        document.removeEventListener('keydown', movePacMan); // Приостанавливаем игру
+        modal.style.display = 'none'; // Скрываем модальное окно
       }
   });
 }

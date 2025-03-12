@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = 'none'; // Скрываем модальное окно
         blRes.style.display = "none";
         blWinner.style.display = "flex";
-      });
+    });
 
     // Закрытие по клику вне окна
     window.onclick = function (event) {

@@ -1,0 +1,58 @@
+@keyframes train {
+    0% {
+        transform: translateX(-80vw);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(130vw);
+    }
+}
+
+@keyframes reel {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
+@media (max-width: 800px) {
+    .card .front {
+      padding: 5px;
+    }   
+    .card .back {
+      padding: 10px;
+    }
+}
+
+@keyframes text {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-36vw);
+    }
+    40% {
+        transform: translateX(-36vw);
+    }
+    50% {
+        transform: translateX(-72vw);
+    }
+    65% {
+        transform: translateX(-72vw);
+    }
+    75% {
+        transform: translateX(-36vw);
+    }
+    90% {
+        transform: translateX(-36vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

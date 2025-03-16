@@ -21,7 +21,7 @@ body{
 .modal-content {
     display: flex;
     border-radius: 2.6vw;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     background: #FFE1BB;
     flex-direction: column;
     align-items: center;
@@ -79,7 +79,7 @@ body{
     display: grid;
     grid-column-gap: 1.5vw;
     grid-row-gap: 1.5vw;
-    height: 90.758vh;
+    height: 90.723vh;
 }
 
 .sectionfirst{
@@ -97,7 +97,7 @@ body{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     overflow: hidden;
 }
 
@@ -105,56 +105,47 @@ body{
     background-color: #F0E6D1;
     background-image: url(../img/Header.svg);
     grid-area: 1 / 1 / 2 / 13;
-    background-size: 100%;
+    background-size: 100% 120%;
 }
 
 .bl_2{
     background-color: #F57B45;
     background-image: url(../img/Fon_train.svg);
     grid-area: 2 / 1 / 3 / 9;
+    background-size: cover;
 }
 
 .img_train{
-    margin-top: 6vw;
+    margin-top: 10.7vh;
     margin-left: -14.1vw;
     width: 73.9vw;
+    height: 13.8889vh;
     animation: train 8s ease-in-out infinite;
-}
-
-@keyframes train {
-    0% {
-        transform: translateX(-80vw);
-    }
-    40% {
-        transform: translateX(0);
-    }
-    60% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(130vw);
-    }
 }
 
 .bl_3{
     background-color: #F6CA45;
     grid-area: 3 / 1 / 4 / 9;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     display: flex;
     flex-direction: column;
-    padding: 2vw;
-    gap: 3.6vw;
-    align-items: flex-start;
-    justify-content: flex-start;
+    gap: 6.48vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_b{
+    display: flex;
+    width: 57.96vw;
+    justify-content: space-between;
 }
 
 .text_bt{
     display: flex;
-    gap: 23.6vw
 }
 
 .img_text_1{
-    height: 3.75vw;
+    height: 6.66vh;
 }
 
 .bt, .bt_res, .bt_close, #but_res{
@@ -188,6 +179,13 @@ body{
     width: 1.35vw;
 }
 
+.text_num{
+    display: flex;
+    flex-direction: row;
+    width: 57.96vw;
+    justify-content: space-between;
+}
+
 .text_num_1{
     display: flex;
     flex-direction: row;
@@ -202,12 +200,13 @@ body{
 }
 
 .img_num{
-    width: 2.7vw;
+    width: 2.3438vw;
+    height: 4.1667vh;
 }
 
 .text{
     font-family: 'Geomertia_Bold';
-    font-size: 1.45vw;
+    font-size: 1.4583vw;
     color: #1D1E19;
     text-transform: uppercase;
     line-height: normal;
@@ -217,6 +216,7 @@ body{
     background-color: #66AEF4;
     background-image: url(../img/Noodles.svg);
     grid-area: 2 / 9 / 4 / 13;
+    background-size: cover;
 }
 
 .img_drag_1, .img_drag_2, .img_drag_3, .img_drag_4, .img_drag_5, .img_drag_6{
@@ -225,33 +225,39 @@ body{
 }
 
 .img_drag_1{
-    width: 8vw;
-    margin: 2.5vw 0 0 1.5vw;
+    width: 8.75vw;
+    height: 9.2593vh;
+    margin: 6.85vh 0 0 1.5vw;
 }
 
 .img_drag_2{
-    width: 1.9vw;
-    margin: 13.7vw 0 0 8.2vw;
+    width: 1.97vw;
+    height: 3.51vh;
+    margin: 24.44vh 0 0 8.2vw;
 }
 
 .img_drag_3{
     width: 4.4vw;
-    margin: 15.3vw 0 0 1.5vw;
+    height: 7.68vh;
+    margin: 33.42vh 0 0 1.5vw;
 }
 
 .img_drag_4{
     width: 1.6vw;
-    margin: 9.1vw 0 0 20vw;
+    height: 2.87vh;
+    margin: 18.24vh 0 0 20vw;
 }
 
 .img_drag_5{
     width: 3.1vw;
-    margin: 7.1vw 0 0 25vw;
+    height: 5.64vh;
+    margin: 20.83vh 0 0 25vw;
 }
 
 .img_drag_6{
     width: 1.8vw;
-    margin: 23.5vw 0 0 25.3vw;
+    height: 3.05vh;
+    margin: 42.96vh 0 0 25.3vw;
 }
 
 .sectionsecond, .sectionthird{
@@ -268,7 +274,7 @@ body{
     display: flex;
     background-color: #F57B45;
     grid-area: 1 / 1 / 3 / 7;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     overflow: hidden;
     align-items: center;
     justify-content: center;
@@ -301,7 +307,7 @@ body{
     height: 4.58vw; 
     background-color: #5DC27C; 
     border-radius: 50%; 
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     cursor: pointer;
     z-index: 3;
     margin-top: -8vw;
@@ -315,11 +321,6 @@ body{
     animation: reel 4s linear; 
     overflow: hidden;
     gap: 1.5vw;
-}
-
-@keyframes reel {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(0%); }
 }
 
 .inner {
@@ -376,7 +377,7 @@ body{
 .bl_9{
     background-color: #F0E6D1;
     grid-area: 1 / 1 / 2 / 13;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -414,7 +415,7 @@ body{
     transform-style: preserve-3d;
     transition: 0.4s ease-in-out;
     background: #5DC27C;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     border-radius: 1.3vw;
     align-items: center;
     justify-content: center;
@@ -442,15 +443,6 @@ body{
 .card .front {
     /* переворачиваем карточку обложкой вверх */
     transform: rotateY(-180deg);
-}
-    
-@media (max-width: 800px) {
-    .card .front {
-      padding: 5px;
-    }   
-    .card .back {
-      padding: 10px;
-    }
 }
 
 .card .inside.picked, .card .inside.matched {
@@ -517,14 +509,14 @@ body{
 
 .bl_15{
     background-color: #F0E6D1;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     grid-area: 2 / 4 / 4 / 7;
     background-image: url(../img/Illustr_8.svg);
 }
 
 .bl_16 {
     background-color: #F0E6D1;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     grid-area: 1 / 7 / 4 / 13;
     overflow: hidden;
 }
@@ -579,7 +571,7 @@ body{
 .bl_17{
     display: flex;
     background-color: #C3DD7C;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     grid-area: 1 / 1 / 4 / 10;
     justify-content: space-evenly;
     align-items: center;
@@ -590,26 +582,23 @@ body{
 .ticket_1, .ticket_2, .ticket_3, .ticket_4{
     width: 30.2vw;
     height: 13.95vw;
+    background-size: cover;
 }
 
 .ticket_1{
     background-image: url(../img/Ticket_fon_1.svg);
-    background-size: cover;
 }
 
 .ticket_2{
     background-image: url(../img/Ticket_fon_2.svg);
-    background-size: cover;
 }
 
 .ticket_3{
     background-image: url(../img/Ticket_fon_3.png);
-    background-size: cover;
 }
 
 .ticket_4{
     background-image: url(../img/Ticket_fon_4.png);
-    background-size: cover;
 }
 
 .canvas {
@@ -628,7 +617,7 @@ body{
 }
 
 .bl_18{
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     background-color: #F6CA45;
     grid-area: 1 / 10 / 4 / 13;
     display: flex;
@@ -653,7 +642,7 @@ body{
 
 .bl_19{
     display: flex;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     background-color: #F57B45;
     grid-area: 4 / 1 / 5 / 6;
     align-items: center;
@@ -666,39 +655,9 @@ body{
     animation: text 15s ease-in-out infinite;
 }
 
-@keyframes text {
-    0% {
-        transform: translateX(0);
-    }
-    15% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-36vw);
-    }
-    40% {
-        transform: translateX(-36vw);
-    }
-    50% {
-        transform: translateX(-72vw);
-    }
-    65% {
-        transform: translateX(-72vw);
-    }
-    75% {
-        transform: translateX(-36vw);
-    }
-    90% {
-        transform: translateX(-36vw);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .bl_20{
     background-color: #F0E6D1;
-    border: 5px solid #1D1E19;
+    border: 0.26vw solid #1D1E19;
     grid-area: 4 / 6 / 5 / 13;
     background-image: url(../img/Illustr_9.svg);
 }

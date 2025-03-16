@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let winningImages = []; // Собранные билеты
-
     // Отслеживание изменения src у #winningImage
     const winningImageElement = document.getElementById("winningImage");
 
@@ -40,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const imgBtRes = document.querySelector(".img_bt");
         const butRes = document.getElementById("but_res");
         const resText = document.querySelector(".res");
+        const closeButton = document.querySelector(".bt_close");
 
         modal.style.display = "block"; 
         blRes.style.display = "flex";
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Количество билетов:", count);
         console.log("Уникальные билеты:", uniqueImages);
 
-        if (count < 3) {
+        if (count <= 3) {
             // Не все игры сыграны
             imgRes.src = images[0];
             resText.textContent = "Сыграйте во все мини-игры";
@@ -70,8 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
             butRes.style.backgroundColor =" #FF814A";
             butRes.onclick = function () {
                 location.reload(); // Перезагрузка страницы для новой игры
-                blRes.style.display = "none";
-                blWinner.style.display = "flex";
             };
         } else {
             // Все билеты уникальные — победа
@@ -81,10 +79,22 @@ document.addEventListener("DOMContentLoaded", function () {
             butRes.style.backgroundColor =" #F6CA45";
             butRes.onclick = function () {
                 modal.style.display = "none";
+            };   
+        }
+
+        closeButton.onclick = function () {
+            modal.style.display = 'none'; // Скрываем модальное окно
+            blRes.style.display = "none";
+            blWinner.style.display = "flex";
+        };
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
                 blRes.style.display = "none";
                 blWinner.style.display = "flex";
-            };
-        }
+            }
+        };
     }
 
     // Привязываем обработчик к кнопке результата
@@ -92,27 +102,4 @@ document.addEventListener("DOMContentLoaded", function () {
     if (buttonRes) {
         buttonRes.onclick = openModal;
     }
-
-    // Закрытие модального окна
-    const closeButton = document.querySelector(".bt_close");
-    const modal = document.getElementById("modal");
-    const blRes = document.getElementById(".bl_res");
-    const blWinner = document.getElementById(".bl_winner");
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none'; // Скрываем модальное окно
-        blRes.style.display = "none";
-        blWinner.style.display = "flex";
-    });
-
-    // Закрытие по клику вне окна
-    window.onclick = function (event) {
-        const modal = document.getElementById("modal");
-        const blRes = document.getElementById(".bl_res");
-        const blWinner = document.getElementById(".bl_winner");
-        if (event.target === modal) {
-            modal.style.display = "none";
-            blRes.style.display = "none";
-            blWinner.style.display = "flex";
-        }
-    };
 });

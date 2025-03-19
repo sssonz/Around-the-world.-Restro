@@ -22,9 +22,6 @@
     .card .front {
       padding: 5px;
     }   
-    .card .back {
-      padding: 10px;
-    }
 }
 
 @keyframes text {
@@ -54,5 +51,36 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes text_1 {
+    0% {
+        transform: translateX(1.5vw);
+    }
+    
+    15% {
+        transform: translateX(1.5vw);
+    }
+    25% {
+        transform: translateX(-82vw);
+    }
+    40% {
+        transform: translateX(-82vw);
+    }
+    50% {
+        transform: translateX(-165vw);
+    }
+    65% {
+        transform: translateX(-165vw);
+    }
+    75% {
+        transform: translateX(-82vw);
+    }
+    90% {
+        transform: translateX(-82vw);
+    }
+    100% {
+        transform: translateX(1.5vw);
     }
 }

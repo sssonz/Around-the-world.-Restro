@@ -102,4 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (buttonRes) {
         buttonRes.onclick = openModal;
     }
+
+    const buttonR = document.querySelector(".bt_r");
+    if (buttonR) {
+        buttonR.onclick = openModal;
+    }
 });

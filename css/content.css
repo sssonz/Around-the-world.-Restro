@@ -26,6 +26,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 1.56vw 1.56vw 4.79vw 0;
+    gap: 0.5vw;
 }
 
 .bl_bt{
@@ -48,7 +49,6 @@ body{
 
 #winningImage{
     width: 23.43vw;
-    height: 10.83vw;
 }
 
 .bl_res{
@@ -70,9 +70,12 @@ body{
     line-height: normal;
 }
 
+.img_res{
+    height: 8.2292vw;
+}
+
 .img_bt{
     height: 1.51vw;
-    width: 14.53vw;
 }
 
 .sectionfirst, .sectionsecond, .sectionthird, .sectionfour, .sectionfive{
@@ -93,7 +96,7 @@ body{
     display: none;
 }
    
-.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_20{
+.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_18, .bl_20{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -112,11 +115,11 @@ body{
     background-color: #F57B45;
     background-image: url(../img/Fon_train.svg);
     grid-area: 2 / 1 / 3 / 9;
-    background-size: cover;
+    background-position: bottom center;
 }
 
 .img_train{
-    margin-top: 10.7vh;
+    margin-top: 10.5vh;
     margin-left: -14.1vw;
     width: 73.9vw;
     height: 13.8889vh;
@@ -140,7 +143,7 @@ body{
     justify-content: space-between;
 }
 
-.text_bt{
+.text_bt, .text_btn{
     display: flex;
 }
 
@@ -148,7 +151,7 @@ body{
     height: 6.66vh;
 }
 
-.bt, .bt_res, .bt_close, #but_res{
+.bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r{
     border-radius: 4vw;
     display: inline-flex;
     padding: 0vw 1vw;
@@ -166,7 +169,11 @@ body{
     transition: background-color 0.2s, transform 0.2s;
 }
 
-.bt:hover, .bt_res:hover, .bt_close:hover, .bt_slot:hover {
+.bt_1{
+    display: none;
+}
+
+.bt:hover, .bt_1:hover, .bt_r:hover, .bt_res:hover, .bt_close:hover, .bt_slot:hover {
     background-color: #C6DF79;
     transform: scale(1.05);
 }
@@ -192,11 +199,15 @@ body{
     gap: 2.6vw;
 }
 
-.num{
+.num, .nu{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1vw;
+}
+
+.nu{
+    width: 19vw;
 }
 
 .img_num{
@@ -204,7 +215,7 @@ body{
     height: 4.1667vh;
 }
 
-.text{
+.text, .text_2{
     font-family: 'Geomertia_Bold';
     font-size: 1.4583vw;
     color: #1D1E19;
@@ -212,11 +223,14 @@ body{
     line-height: normal;
 }
 
+.text_2{
+    width: 25.6250vw;
+}
+
 .bl_4{
     background-color: #66AEF4;
     background-image: url(../img/Noodles.svg);
     grid-area: 2 / 9 / 4 / 13;
-    background-size: cover;
 }
 
 .img_drag_1, .img_drag_2, .img_drag_3, .img_drag_4, .img_drag_5, .img_drag_6{
@@ -347,7 +361,7 @@ body{
     justify-content: flex-start;
 }
 
-.img_text_2{
+.img_text_2, .img_text_4, .img_text_5{
     height: 3.75vw;
 }
 
@@ -470,7 +484,7 @@ body{
 }
 
 .img_text_3{
-    height: 3.75vw;
+    height: 4.5vw;
 }
 
 .bl_12{
@@ -495,10 +509,6 @@ body{
     gap: 3vw;
     align-items: flex-start;
     justify-content: flex-start;
-}
-
-.img_text_4{
-    height: 3.75vw;
 }
 
 .bl_14{
@@ -632,12 +642,12 @@ body{
     padding: 0.9vw 1vw;
 }
 
-#but_res{
-    padding: 1.05vw 1vw 1.05vw 1vw;
+.text_r{
+    display: none;
 }
 
-.img_text_5{
-    height: 3.75vw;
+#but_res{
+    padding: 1.05vw 1vw 1.05vw 1vw;
 }
 
 .bl_19{

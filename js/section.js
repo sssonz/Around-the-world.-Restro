@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const button = document.querySelector('.bt');
+    const button = document.querySelector(".bt");
+    const but = document.querySelector(".bt_1");
     const sections = document.querySelectorAll('div[class^="section"]');
     let isFirstSectionVisible = true; // Флаг для отслеживания состояния первой секции
 
@@ -14,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     button.addEventListener('click', () => {
+        if (isFirstSectionVisible) {
+            showAllSections(); // Показываем все секции, кроме первой
+            isFirstSectionVisible = false; // Обновляем флаг
+        }
+    });
+
+    but.addEventListener('click', () => {
         if (isFirstSectionVisible) {
             showAllSections(); // Показываем все секции, кроме первой
             isFirstSectionVisible = false; // Обновляем флаг

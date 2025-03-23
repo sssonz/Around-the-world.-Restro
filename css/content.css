@@ -55,7 +55,7 @@ body{
     gap: 3.5vw;
 }
 
-.tex{
+.tex, .text_mob{
     display: flex;
     gap: 1.5vw;
     flex-direction: column;
@@ -78,6 +78,11 @@ body{
     height: 1.51vw;
 }
 
+.section_mob{
+    display: none;
+}
+
+
 .sectionfirst, .sectionsecond, .sectionthird, .sectionfour, .sectionfive{
     display: grid;
     grid-column-gap: 1.5vw;
@@ -96,7 +101,7 @@ body{
     display: none;
 }
    
-.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_18, .bl_20{
+.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_18, .bl_20, .bl_mob_1, .bl_mob_2, .bl_mob_3{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -143,7 +148,7 @@ body{
     justify-content: space-between;
 }
 
-.text_bt, .text_btn{
+.text_bt{
     display: flex;
 }
 
@@ -215,7 +220,7 @@ body{
     height: 4.1667vh;
 }
 
-.text, .text_2{
+.text, .text_2, .text_mob{
     font-family: 'Geomertia_Bold';
     font-size: 1.4583vw;
     color: #1D1E19;

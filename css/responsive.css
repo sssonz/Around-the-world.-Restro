@@ -113,12 +113,20 @@
         height: 94.136vh;
     }
 
-    .bl_1, .bl_2, .bl_3, .bl_4, .bl_5, .bl_6, .bl_7, .bl_8, .bl_9, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_16, .bl_17, .bl_18, .bl_19, .bl_20{
+    .bl_1, .bl_2, .bl_3, .bl_4, .bl_5, .bl_6, .bl_7, .bl_8, .bl_9, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_16, .bl_17, .bl_18, .bl_19, .bl_20, .bl_18_414{
         border: 0.5vw solid #1D1E19;
     }
 
     .bl_4{
         background-size: 110%;
+    }
+
+    .bl_2_414{
+        display: none;
+    }
+
+    .bl_7_414{
+        display: none;;
     }
 
     .bt{
@@ -146,7 +154,7 @@
         gap: 3vh;
     }
 
-    .bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r{
+    .bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r, .bt_result{
         border-radius: 10.4167vw;
         display: inline-flex;
         padding: 1vw 2.2135vw 1.2vw 2.2135vw;
@@ -459,6 +467,10 @@
     .bl_19{
         grid-area: 10 / 1 / 11 / 3;
     }
+
+    .bl_18_414{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 415px) and (orientation: portrait) {
@@ -525,8 +537,8 @@
         height: 90.26vh;
     }
 
-    .bl_1, .bl_2, .bl_3, .bl_4, .bl_5, .bl_6, .bl_7, .bl_8, .bl_9, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_16, .bl_17, .bl_18, .bl_19, .bl_20{
-        border: 0.3906vw solid #1D1E19;
+    .bl_1, .bl_2, .bl_3, .bl_4, .bl_5, .bl_6, .bl_7, .bl_7_414, .bl_8, .bl_9, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_16, .bl_17, .bl_18, .bl_19, .bl_20, .bl_2_414{
+        border: 0.3348vw solid #1D1E19;
     }
 
     .bl_3{
@@ -537,7 +549,7 @@
         justify-content: flex-start;
     }
 
-    .bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r{
+    .bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r, .bt_result{
         border-radius: 10.4167vw;
         display: inline-flex;
         padding: 0.7vw 1.4509vw 1vw 1.4509vw;
@@ -556,7 +568,7 @@
     }
 
     .text_num_1{
-        gap: 2.5vw;
+        gap: 4.4643vw;
     }
 
     .text_b{
@@ -568,7 +580,7 @@
     }
 
     .img_text_3{
-        height: 8.277vw;
+        height: 7.5893vw;
     }
 
     .text_num{
@@ -596,7 +608,7 @@
     }
 
     .nu{
-        width: 47vw;
+        width: 26.4vw;
     }
 
     .text_num_2{
@@ -662,6 +674,196 @@
         margin: 69.0821vh 0 0 38.8393vw;
     }
 
+    .sectionsecond{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding: 2.2321vw 2.2321vw 1.1161vw 2.2321vw;
+        height: 115.0670vw;
+    }
+
+    .bl_2_414{
+        display: flex;
+        grid-area: 1 / 1 / 2 / 4;
+        background-image: url(../img/Fon_train_414.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .img_train{
+        margin-top: 15.4vh;
+        margin-left: -40vw;
+        width: 112.7232vw;
+        height: 25.6039vh;
+        animation: train1 8s ease-in-out infinite;
+    }
+
+    .bl_7{
+        display: none;
+    }
+
+    .bl_7_414{
+        display: flex;
+        grid-area: 2 / 1 / 3 / 4;
+        gap: 3.3482vw;
+        padding: 3.3482vw 0 0 3.3482vw;
+        background-image: url(../img/Illustr_2_414.svg);
+    }
+
+    .bl_8{
+        grid-area: 3 / 1 / 6 / 2;
+        background-image: url(../img/Cafe_414.svg);
+    }
+
+    .bl_5{
+        grid-area: 3 / 2 / 6 / 4;
+        gap: 6.5vw;
+    }
+
+    .img_slot {
+        width: 60vw;
+        height: 100.6vw;
+    }
+
+    .container {
+        width: 34.4866vw;
+        height: 18.0804vw;
+        margin-left: 8.8vw;
+        margin-top: 2.5vw;
+    }
+
+    .bt_slot {
+        width: 6.1384vw;
+        height: 6.1384vw;
+        border: 0.36vw solid #1D1E19;
+        margin-top: -10vw;
+    }
+
+    .reel {
+        width: 22.3214vw;
+        margin-top: -8.5vw;
+        animation: reel 4s linear;
+        gap: 1.8973vw;
+    }
+
+    .inner {
+        width: 22.3214vw;
+    }
+
+    .bl_6{
+        display: none;
+    }
+
+    .sectionthird{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 33.1473vw 26.7857vw;
+        padding: 0vw 2.2321vw 0vw 2.2321vw;
+        height: 60.8259vw;
+    }
+
+    .bl_11{
+        grid-area: 1 / 1 / 2 / 3;
+        gap: 3.3482vw;
+        padding: 2.4vw 0 0 3.3482vw;
+        background-image: url(../img/Illustr_5_414.svg);
+    }
+
+    .bl_9{
+        grid-area: 2 / 1 / 3 / 4;
+    }
+
+    .game{
+        gap: 1.1161vw;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 14.1105vw;
+        height: 21.2734vw;
+    }
+
+    .front img {
+        width: 11.3839vw;
+    }
+
+    .card .inside {
+        border: 0.36vw solid #1D1E19;
+        width: 95%;
+        height: 96%;
+    }
+
+    .bl_10{
+        display: none;
+    }
+
+    .bl_12{
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .sectionfour{
+        display: none;
+    }
+
+    .sectionfive{
+        padding: 1.1161vw 2.2321vw 2.2321vw 2.2321vw;
+        height: 129.4643vw;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .bl_18{
+        display: none;
+    }
+
+    .bl_18_414{
+        display: flex;
+        flex-direction: column;
+        grid-area: 1 / 1 / 2 / 2;
+        gap: 3.3482vw;
+        padding: 3.3482vw 0 0 3.3482vw;
+        background-color: #F6CA45;
+    }
+
+    .text_r {
+        display: flex;
+        width: 88.2813vw;
+        justify-content: space-between;
+    }
+
+    .bl_17{
+        grid-area: 2 / 1 / 4 / 2;
+        flex-direction: column;
+        padding: 0vw;
+    }
+
+    .ticket_1, .ticket_2, .ticket_3, .ticket_4 {
+        width: 40.1786vw;
+        height: 18.5658vw;
+    }
+
+    .canvas {
+        width: 40.1786vw;
+        height: 18.5658vw;
+    }
+
+    .bl_20{
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .img_text_6 {
+        height: 200%;
+        width: 265vw;
+        animation: text_2 15s ease-in-out infinite;
+    }
+
+    .bl_19{
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .bl_bt {
+        height: 4.9766vw;
+    }
 }
 
 @media screen and (max-width: 360px) and (orientation: portrait) {
@@ -711,5 +913,25 @@
 
     .text_num_2{
         gap: 2.5vw;
+    }
+
+    .img_train{
+        margin-top: 10.3vh;
+    }
+
+    .text_num_1 {
+        gap: 2vw;
+    }
+
+    .nu{
+        width: 28.3vw;
+    }
+
+    .bl_11 {
+        background-image: none;
+    }
+
+    .bl_8:hover {
+        background-image: url(../img/Cafe_414_hover.svg);
     }
 }

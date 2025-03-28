@@ -13,6 +13,21 @@
     }
 }
 
+@keyframes train1 {
+    0% {
+        transform: translateX(-80vw);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150vw);
+    }
+}
+
 @keyframes reel {
     0% { transform: translateY(-100%); }
     100% { transform: translateY(0%); }
@@ -79,6 +94,68 @@
     }
     90% {
         transform: translateX(-82vw);
+    }
+    100% {
+        transform: translateX(1.5vw);
+    }
+}
+
+    @keyframes text_2 {
+    0% {
+        transform: translateX(1.5vw);
+    }
+    
+    15% {
+        transform: translateX(1.5vw);
+    }
+    25% {
+        transform: translateX(-82vw);
+    }
+    40% {
+        transform: translateX(-82vw);
+    }
+    50% {
+        transform: translateX(-165vw);
+    }
+    65% {
+        transform: translateX(-165vw);
+    }
+    75% {
+        transform: translateX(-82vw);
+    }
+    90% {
+        transform: translateX(-82vw);
+    }
+    100% {
+        transform: translateX(1.5vw);
+    }
+}
+
+@keyframes text_2 {
+    0% {
+        transform: translateX(1.5vw);
+    }
+    
+    15% {
+        transform: translateX(1.5vw);
+    }
+    25% {
+        transform: translateX(-87vw);
+    }
+    40% {
+        transform: translateX(-87vw);
+    }
+    50% {
+        transform: translateX(-176vw);
+    }
+    65% {
+        transform: translateX(-176vw);
+    }
+    75% {
+        transform: translateX(-87vw);
+    }
+    90% {
+        transform: translateX(-87vw);
     }
     100% {
         transform: translateX(1.5vw);

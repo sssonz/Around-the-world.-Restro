@@ -55,6 +55,10 @@ body{
     gap: 3.5vw;
 }
 
+.bl_2_414{
+    display: none;
+}
+
 .tex, .text_mob{
     display: flex;
     gap: 1.5vw;
@@ -101,7 +105,7 @@ body{
     display: none;
 }
    
-.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_18, .bl_20, .bl_mob_1, .bl_mob_2, .bl_mob_3{
+.bl_1, .bl_2, .bl_4, .bl_6, .bl_7, .bl_7_414, .bl_8, .bl_10, .bl_11, .bl_12, .bl_13, .bl_14, .bl_15, .bl_18, .bl_20, .bl_mob_1, .bl_mob_2, .bl_mob_3, .bl_18_414{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +120,7 @@ body{
     background-size: 100% 120%;
 }
 
-.bl_2{
+.bl_2, .bl_2_414{
     background-color: #F57B45;
     background-image: url(../img/Fon_train.svg);
     grid-area: 2 / 1 / 3 / 9;
@@ -142,6 +146,10 @@ body{
     justify-content: center;
 }
 
+.bl_18_414{
+    display: none;
+}
+
 .text_b{
     display: flex;
     width: 57.96vw;
@@ -156,7 +164,7 @@ body{
     height: 6.66vh;
 }
 
-.bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r{
+.bt, .bt_1, .bt_res, .bt_close, #but_res, .bt_r, .bt_result{
     border-radius: 4vw;
     display: inline-flex;
     padding: 0vw 1vw;
@@ -178,7 +186,7 @@ body{
     display: none;
 }
 
-.bt:hover, .bt_1:hover, .bt_r:hover, .bt_res:hover, .bt_close:hover, .bt_slot:hover {
+.bt:hover, .bt_1:hover, .bt_r:hover, .bt_res:hover, .bt_close:hover, .bt_slot:hover, .bt_result:hover {
     background-color: #C6DF79;
     transform: scale(1.05);
 }
@@ -353,7 +361,7 @@ body{
     background-image: url(../img/Illustr_1.svg);
 }
 
-.bl_7{
+.bl_7, .bl_7_414{
     background-color: #F6CA45;
     grid-area: 2 / 7 / 3 / 11;
     background-image: url(../img/Illustr_2.svg);
@@ -364,6 +372,10 @@ body{
     gap: 3vw;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+.bl_7_414{
+    display: none;
 }
 
 .img_text_2, .img_text_4, .img_text_5{
